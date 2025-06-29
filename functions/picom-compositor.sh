@@ -29,18 +29,18 @@ install_picom_compositor() {
     "uthash-dev"
   )
 
-  sudo apt update >/dev/null
-  sudo apt install -y "${DEPENDENCIES[@]}" >/dev/null
+  sudo apt update
+  sudo apt install -y "${DEPENDENCIES[@]}"
 
   local SOURCE_DIR="$HOME/picom"
   local BUILD_DIR="$SOURCE_DIR/build"
 
-  git clone --quiet https://github.com/yshui/picom.git "$SOURCE_DIR"
+  git clone https://github.com/yshui/picom.git "$SOURCE_DIR"
 
-  meson setup --buildtype=release "$BUILD_DIR" "$SOURCE_DIR" >/dev/null
-  ninja -C "$BUILD_DIR" >/dev/null
+  meson setup --buildtype=release "$BUILD_DIR" "$SOURCE_DIR"
+  ninja -C "$BUILD_DIR"
 
-  sudo ninja -C "$BUILD_DIR" install >/dev/null
+  sudo ninja -C "$BUILD_DIR" install
 
   rm -rf "$SOURCE_DIR"
 }

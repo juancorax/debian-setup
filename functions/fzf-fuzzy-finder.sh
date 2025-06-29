@@ -3,9 +3,9 @@ install_fzf_fuzzy_finder() {
 
   local SOURCE_DIR="$HOME/.fzf"
 
-  git clone --quiet --depth 1 https://github.com/junegunn/fzf.git "$SOURCE_DIR"
+  git clone --depth 1 https://github.com/junegunn/fzf.git "$SOURCE_DIR"
 
-  "$SOURCE_DIR/install --key-bindings --completion --no-update-rc" >/dev/null
+  "$SOURCE_DIR/install --key-bindings --completion --no-update-rc"
 
   rm -rf "$SOURCE_DIR"
 }

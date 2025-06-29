@@ -14,5 +14,5 @@ install_flatpak_packages() {
     "org.qbittorrent.qBittorrent" # bittorrent client
   )
 
-  flatpak install flathub -y "${FLATPAK_PACKAGES[@]}" >/dev/null
+  flatpak install flathub -y "${FLATPAK_PACKAGES[@]}"
 }

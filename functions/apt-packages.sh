@@ -45,8 +45,8 @@ install_apt_packages() {
     "wireplumber"    # pipewire
   )
 
-  sudo apt update >/dev/null
-  sudo apt install -y "${PACKAGES[@]}" >/dev/null
+  sudo apt update
+  sudo apt install -y "${PACKAGES[@]}"
 
   mkdir -p "$HOME/.local/bin"
   ln -s /usr/bin/batcat "$HOME/.local/bin/bat"

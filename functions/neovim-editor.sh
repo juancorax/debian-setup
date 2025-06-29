@@ -4,7 +4,7 @@ install_neovim_editor() {
   local NEOVIM_TARBALL_URL=https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.tar.gz
   local SHA256_CHECKSUMS_URL=https://github.com/neovim/neovim/releases/download/stable/shasum.txt
 
-  wget --quiet -P "$HOME" "$NEOVIM_TARBALL_URL" "$SHA256_CHECKSUMS_URL"
+  wget -P "$HOME" "$NEOVIM_TARBALL_URL" "$SHA256_CHECKSUMS_URL"
 
   local NEOVIM_TARBALL
   NEOVIM_TARBALL="$HOME/$(basename "$NEOVIM_TARBALL_URL")"

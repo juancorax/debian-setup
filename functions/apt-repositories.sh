@@ -25,5 +25,5 @@ deb-src https://deb.debian.org/debian $CODENAME-updates ${COMPONENTS[@]}
 _EOF_
   )
 
-  echo "$SOURCES_LIST" | sudo tee /etc/apt/sources.list >/dev/null
+  echo "$SOURCES_LIST" | sudo tee /etc/apt/sources.list
 }

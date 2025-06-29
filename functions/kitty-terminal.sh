@@ -1,7 +1,7 @@
 install_kitty_terminal() {
   echo "[debian-setup] Installing Kitty terminal"
 
-  curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin >/dev/null
+  curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
   local INSTALL_DIR="$HOME/.local/kitty.app"
   local DESKTOP_FILES_DIR="$HOME/.local/share/applications"
