@@ -48,6 +48,7 @@ install_apt_packages() {
   sudo apt update >/dev/null
   sudo apt install -y "${PACKAGES[@]}" >/dev/null
 
+  mkdir -p "$HOME/.local/bin"
   ln -s /usr/bin/batcat "$HOME/.local/bin/bat"
   ln -s /usr/bin/fdfind "$HOME/.local/bin/fd"
 
