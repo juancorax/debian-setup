@@ -10,6 +10,7 @@ install_apt_packages() {
     "fcitx5"                # japanese input
     "fcitx5-mozc"           # japanese input
     "fd-find"               # fzf
+    "feh"                   # wallpapers
     "flatpak"               # newer packages
     "git"                   # programming / dotfiles / tmux-plugins
     "libavcodec-extra"      # media codecs
