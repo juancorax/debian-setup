@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euo PIPEFAIL
+set -euo pipefail
 
 source ./functions/apt-packages.sh
 source ./functions/apt-repositories.sh
