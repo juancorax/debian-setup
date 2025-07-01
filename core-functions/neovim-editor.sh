@@ -1,5 +1,5 @@
 install_neovim_editor() {
-  echo "[debian-setup] Installing Neovim editor"
+  display_header "Installing Neovim editor"
 
   local NEOVIM_TARBALL_URL=https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.tar.gz
   local SHA256_CHECKSUMS_URL=https://github.com/neovim/neovim/releases/download/stable/shasum.txt

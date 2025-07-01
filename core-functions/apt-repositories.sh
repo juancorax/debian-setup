@@ -1,5 +1,5 @@
 configure_apt_repositories() {
-  echo "[debian-setup] Configuring APT repositories"
+  display_header "Configuring APT repositories"
 
   local CODENAME
   CODENAME="$(lsb_release -cs 2>/dev/null)"

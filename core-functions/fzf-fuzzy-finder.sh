@@ -1,5 +1,5 @@
 install_fzf_fuzzy_finder() {
-  echo "[debian-setup] Installing fzf fuzzy finder"
+  display_header "Installing fzf fuzzy finder"
 
   local SOURCE_DIR="$HOME/.fzf"
 

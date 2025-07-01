@@ -1,5 +1,5 @@
 add_configuration_files() {
-  echo "[debian-setup] Adding configuration files"
+  display_header "Adding configuration files"
 
   local STOW_DIR="$HOME/dotfiles"
   local TARGET_DIR="$HOME"

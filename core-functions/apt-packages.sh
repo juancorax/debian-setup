@@ -1,5 +1,5 @@
 install_apt_packages() {
-  echo "[debian-setup] Installing APT packages"
+  display_header "Installing APT packages"
 
   local PACKAGES=(
     "arandr"                # screen layout

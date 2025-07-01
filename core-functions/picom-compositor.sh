@@ -1,5 +1,5 @@
 install_picom_compositor() {
-  echo "[debian-setup] Installing picom compositor"
+  display_header "Installing picom compositor"
 
   local DEPENDENCIES=(
     "git"

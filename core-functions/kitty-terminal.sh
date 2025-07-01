@@ -1,5 +1,5 @@
 install_kitty_terminal() {
-  echo "[debian-setup] Installing Kitty terminal"
+  display_header "Installing Kitty terminal"
 
   curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 

@@ -1,11 +1,11 @@
 change_shell_to_zsh() {
-  echo "[debian-setup] Changing the default shell to Zsh"
+  display_header "Changing the default shell to Zsh"
 
   chsh -s "$(command -v zsh)"
 }
 
 install_zsh_plugins() {
-  echo "[debian-setup] Installing Zsh plugins"
+  display_header "Installing Zsh plugins"
 
   local PLUGINS_DIR="$HOME/.zsh"
 

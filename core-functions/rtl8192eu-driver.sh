@@ -15,7 +15,7 @@ install_rtl8192eu_driver() {
     esac
   done
 
-  echo "[debian-setup] Installing Realtek RTL8192EU driver"
+  display_header "Installing Realtek RTL8192EU driver"
 
   local DEPENDENCIES=(
     "build-essential"

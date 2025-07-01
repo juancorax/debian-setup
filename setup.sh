@@ -2,6 +2,8 @@
 
 set -euo pipefail
 
+source ./utility-functions/display-header.sh
+
 source ./core-functions/apt-packages.sh
 source ./core-functions/apt-repositories.sh
 source ./core-functions/awesome-window-manager.sh
