@@ -14,6 +14,7 @@ install_apt_packages() {
     "flatpak"               # newer packages
     "git"                   # programming / dotfiles / tmux-plugins
     "libavcodec-extra"      # media codecs
+    "libnotify-bin"         # desktop notifications
     "locales"               # locale-gen
     "lxappearance"          # gtk theme
     "maim"                  # maimpick
