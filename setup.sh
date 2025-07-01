@@ -2,20 +2,20 @@
 
 set -euo pipefail
 
-source ./functions/apt-packages.sh
-source ./functions/apt-repositories.sh
-source ./functions/awesome-window-manager.sh
-source ./functions/configuration-files.sh
-source ./functions/flatpak-packages.sh
-source ./functions/fzf-fuzzy-finder.sh
-source ./functions/japanese-language.sh
-source ./functions/kitty-terminal.sh
-source ./functions/laptop-battery-optimizer.sh
-source ./functions/neovim-editor.sh
-source ./functions/picom-compositor.sh
-source ./functions/rtl8192eu-driver.sh
-source ./functions/tmux-plugins.sh
-source ./functions/zsh-shell.sh
+source ./core-functions/apt-packages.sh
+source ./core-functions/apt-repositories.sh
+source ./core-functions/awesome-window-manager.sh
+source ./core-functions/configuration-files.sh
+source ./core-functions/flatpak-packages.sh
+source ./core-functions/fzf-fuzzy-finder.sh
+source ./core-functions/japanese-language.sh
+source ./core-functions/kitty-terminal.sh
+source ./core-functions/laptop-battery-optimizer.sh
+source ./core-functions/neovim-editor.sh
+source ./core-functions/picom-compositor.sh
+source ./core-functions/rtl8192eu-driver.sh
+source ./core-functions/tmux-plugins.sh
+source ./core-functions/zsh-shell.sh
 
 setup() {
   clear
