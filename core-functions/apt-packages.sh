@@ -40,6 +40,7 @@ install_apt_packages() {
     "zip"                   # create .zip files
     "zsh"                   # replacement for bash
   )
+  local EXEC_FILES_DIR="$HOME/.local/bin"
   local SERVICES=(
     "pipewire"       # pipewire
     "pipewire-pulse" # pipewire
@@ -49,9 +50,9 @@ install_apt_packages() {
   sudo apt update
   sudo apt install -y "${PACKAGES[@]}"
 
-  mkdir -p "$HOME/.local/bin"
-  ln -s /usr/bin/batcat "$HOME/.local/bin/bat"
-  ln -s /usr/bin/fdfind "$HOME/.local/bin/fd"
+  mkdir -p "$EXEC_FILES_DIR"
+  ln -s /usr/bin/batcat "$EXEC_FILES_DIR/bat"
+  ln -s /usr/bin/fdfind "$EXEC_FILES_DIR/fd"
 
   systemctl --user --now enable "${SERVICES[@]}"
 }
