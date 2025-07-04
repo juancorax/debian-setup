@@ -2,6 +2,7 @@
 
 set -euo pipefail
 
+source ./utility-functions/display-banner.sh
 source ./utility-functions/display-header.sh
 
 source ./core-functions/apt-packages.sh
@@ -21,6 +22,8 @@ source ./core-functions/zsh-shell.sh
 
 setup() {
   clear
+
+  display_banner
 
   configure_apt_repositories
 
