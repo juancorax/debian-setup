@@ -8,3 +8,18 @@ enable_japanese_locale() {
   flatpak config --user --set languages 'en;ja'
   flatpak update -y
 }
+
+install_transformers_ocr() {
+  display_header "Installing Transformers OCR"
+
+  sudo apt update
+  sudo apt install -y python3-pip maim xclip
+
+  local SOURCE_DIR="$HOME/transformers_ocr"
+
+  git clone https://github.com/Ajatt-Tools/transformers_ocr.git "$SOURCE_DIR"
+
+  sudo make -C "$SOURCE_DIR" install
+
+  rm -rf "$SOURCE_DIR"
+}
