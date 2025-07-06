@@ -1,20 +1,4 @@
 install_rtl8192eu_driver() {
-  while true; do
-    read -rp "Install Realtek RTL8192EU driver? (y/n): "
-
-    case "$REPLY" in
-    [Yy])
-      break
-      ;;
-    [Nn])
-      return
-      ;;
-    *)
-      echo "Error: Please answer with 'y' or 'n'"
-      ;;
-    esac
-  done
-
   display_header "Installing Realtek RTL8192EU driver"
 
   local DEPENDENCIES=(

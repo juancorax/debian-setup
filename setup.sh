@@ -4,6 +4,7 @@ set -euo pipefail
 
 source ./utility-functions/display-banner.sh
 source ./utility-functions/display-header.sh
+source ./utility-functions/display-usage.sh
 
 source ./core-functions/apt-packages.sh
 source ./core-functions/apt-repositories.sh
@@ -21,17 +22,38 @@ source ./core-functions/tmux-plugins.sh
 source ./core-functions/zsh-shell.sh
 
 setup() {
+  local laptop=
+  local wifi_driver=
+
+  while [[ -n "$1" ]]; do
+    case "$1" in
+    --laptop)
+      laptop=1
+      ;;
+
+    --wifi-driver)
+      wifi_driver=1
+      ;;
+
+    --help)
+      display_usage
+      exit
+      ;;
+
+    *)
+      display_usage >&2
+      exit 1
+      ;;
+    esac
+
+    shift
+  done
+
   clear
 
   display_banner
 
   configure_apt_repositories
-
-  if [[ "$1" == "laptop" ]]; then
-    install_laptop_battery_optimizer
-  else
-    install_rtl8192eu_driver
-  fi
 
   install_apt_packages
   add_flathub_repository_to_flatpak
@@ -53,6 +75,9 @@ setup() {
   install_neovim_editor
 
   install_transformers_ocr
+
+  [[ -n "$laptop" ]] && install_laptop_battery_optimizer
+  [[ -n "$wifi_driver" ]] && install_rtl8192eu_driver
 }
 
 setup "$@"
