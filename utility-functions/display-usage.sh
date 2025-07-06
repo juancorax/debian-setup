@@ -1,4 +1,5 @@
 display_usage() {
+  local PROGNAME
   PROGNAME="$(basename "$0")"
 
   cat <<_EOF_

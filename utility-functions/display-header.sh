@@ -1,30 +1,30 @@
 display_header() {
-  local term_width input_text input_text_len header total_pad
+  local TERM_WIDTH INPUT_TEXT INPUT_TEXT_LEN header TOTAL_PAD
 
-  term_width=$(tput cols)
+  TERM_WIDTH=$(tput cols)
 
-  input_text="$1"
-  input_text_len=${#input_text}
+  INPUT_TEXT="$1"
+  INPUT_TEXT_LEN=${#INPUT_TEXT}
 
-  header="$input_text"
+  header="$INPUT_TEXT"
 
-  total_pad=$((term_width - input_text_len - 2))
+  TOTAL_PAD=$((TERM_WIDTH - INPUT_TEXT_LEN - 2))
 
-  if ((total_pad >= 2)); then
-    local pad_left pad_right pad_chars_left pad_chars_right
-    local pad_char='='
-    local pad_char_color='\033[94m'
-    local reset_color='\033[0m'
+  if ((TOTAL_PAD >= 2)); then
+    local PAD_LEFT PAD_RIGHT PAD_CHARS_LEFT PAD_CHARS_RIGHT
+    local PAD_CHAR='='
+    local PAD_CHAR_COLOR='\033[94m'
+    local RESET_COLOR='\033[0m'
 
-    pad_left=$((total_pad / 2))
-    pad_right=$((total_pad - pad_left))
+    PAD_LEFT=$((TOTAL_PAD / 2))
+    PAD_RIGHT=$((TOTAL_PAD - PAD_LEFT))
 
-    pad_chars_left=$(printf '%*s' "$pad_left" '' | tr ' ' "$pad_char")
-    pad_chars_right=$(printf '%*s' "$pad_right" '' | tr ' ' "$pad_char")
+    PAD_CHARS_LEFT=$(printf '%*s' "$PAD_LEFT" '' | tr ' ' "$PAD_CHAR")
+    PAD_CHARS_RIGHT=$(printf '%*s' "$PAD_RIGHT" '' | tr ' ' "$PAD_CHAR")
 
-    header="${pad_char_color}${pad_chars_left}${reset_color} ${input_text} ${pad_char_color}${pad_chars_right}${reset_color}"
-  elif ((total_pad >= 0 && total_pad < 2)); then
-    header=" $input_text "
+    header="${PAD_CHAR_COLOR}${PAD_CHARS_LEFT}${RESET_COLOR} ${INPUT_TEXT} ${PAD_CHAR_COLOR}${PAD_CHARS_RIGHT}${RESET_COLOR}"
+  elif ((TOTAL_PAD >= 0 && TOTAL_PAD < 2)); then
+    header=" $INPUT_TEXT "
   fi
 
   echo
