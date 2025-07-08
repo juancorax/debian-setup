@@ -26,4 +26,6 @@ _EOF_
   )
 
   echo "$SOURCES_LIST" | sudo tee /etc/apt/sources.list
+
+  sudo apt update
 }
