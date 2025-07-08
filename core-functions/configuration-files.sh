@@ -10,4 +10,6 @@ add_configuration_files() {
     package_name=$(basename "$package_directory")
     stow -d "$STOW_DIR" -t "$TARGET_DIR" "$package_name"
   done
+
+  bat cache --build
 }
