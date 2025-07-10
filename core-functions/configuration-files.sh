@@ -11,5 +11,5 @@ add_configuration_files() {
     stow -d "$STOW_DIR" -t "$TARGET_DIR" "$package_name"
   done
 
-  bat cache --build
+  batcat cache --build
 }
