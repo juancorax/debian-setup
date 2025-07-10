@@ -25,7 +25,7 @@ setup() {
   local laptop=
   local wifi_driver=
 
-  while [[ -n "$1" ]]; do
+  while (($# > 0)); do
     case "$1" in
     --laptop)
       laptop=1
