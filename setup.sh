@@ -10,6 +10,7 @@ source ./core-functions/apt-packages.sh
 source ./core-functions/apt-repositories.sh
 source ./core-functions/awesome-window-manager.sh
 source ./core-functions/configuration-files.sh
+source ./core-functions/dev-tools-version-manager.sh
 source ./core-functions/flatpak-packages.sh
 source ./core-functions/fzf-fuzzy-finder.sh
 source ./core-functions/japanese-language.sh
@@ -71,6 +72,9 @@ setup() {
   install_kitty_terminal
   install_tmux_plugins
   install_fzf_fuzzy_finder
+
+  install_dev_tools_version_manager
+  install_dev_tools
 
   install_transformers_ocr
 
