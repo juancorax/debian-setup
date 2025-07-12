@@ -7,7 +7,7 @@ install_laptop_battery_optimizer() {
   local SOURCE_DIR="$HOME/auto-cpufreq"
 
   git clone https://github.com/AdnanHodzic/auto-cpufreq.git "$SOURCE_DIR"
-  sudo "$SOURCE_DIR/auto-cpufreq-installer"
+  sudo "$SOURCE_DIR"/auto-cpufreq-installer --install
 
   sudo auto-cpufreq --install
 
