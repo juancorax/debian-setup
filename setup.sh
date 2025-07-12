@@ -15,7 +15,6 @@ source ./core-functions/fzf-fuzzy-finder.sh
 source ./core-functions/japanese-language.sh
 source ./core-functions/kitty-terminal.sh
 source ./core-functions/laptop-battery-optimizer.sh
-source ./core-functions/neovim-editor.sh
 source ./core-functions/picom-compositor.sh
 source ./core-functions/rtl8192eu-driver.sh
 source ./core-functions/tmux-plugins.sh
@@ -72,7 +71,6 @@ setup() {
   install_kitty_terminal
   install_tmux_plugins
   install_fzf_fuzzy_finder
-  install_neovim_editor
 
   install_transformers_ocr
 
