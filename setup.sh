@@ -19,6 +19,7 @@ source ./core-functions/laptop-battery-optimizer.sh
 source ./core-functions/picom-compositor.sh
 source ./core-functions/rtl8192eu-driver.sh
 source ./core-functions/tmux-plugins.sh
+source ./core-functions/user-directories.sh
 source ./core-functions/zsh-shell.sh
 
 setup() {
@@ -60,6 +61,8 @@ setup() {
   install_flatpak_packages
 
   enable_japanese_locale
+
+  create_user_directories
 
   add_configuration_files
 
