@@ -11,6 +11,7 @@ OPTIONS:
 
   --laptop         Install laptop battery optimizer
   --wifi-driver    Install Realtek RTL8192EU driver
+  --ocr            Install Transformers OCR
   --help           Display this help message
 _EOF_
 }

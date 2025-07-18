@@ -25,6 +25,7 @@ source ./core-functions/zsh-shell.sh
 setup() {
   local laptop=
   local wifi_driver=
+  local ocr=
 
   while (($# > 0)); do
     case "$1" in
@@ -34,6 +35,10 @@ setup() {
 
     --wifi-driver)
       wifi_driver=1
+      ;;
+
+    --ocr)
+      ocr=1
       ;;
 
     --help)
@@ -79,10 +84,9 @@ setup() {
   install_dev_tools_version_manager
   install_dev_tools
 
-  install_transformers_ocr
-
   [[ -n "$laptop" ]] && install_laptop_battery_optimizer
   [[ -n "$wifi_driver" ]] && install_rtl8192eu_driver
+  [[ -n "$ocr" ]] && install_transformers_ocr
 }
 
 setup "$@"
