@@ -23,3 +23,40 @@ install_transformers_ocr() {
 
   rm -rf "$SOURCE_DIR"
 }
+
+install_visual_novel_requirements() {
+  display_header "Installing visual novel requirements"
+
+  local APT_PACKAGES=(
+    "p7zip-full"
+    "unrar"
+  )
+  local FLATPAK_PACKAGES=(
+    "net.davidotek.pupgui2"
+    "net.lutris.Lutris"
+  )
+  local WINE_PREFIXES_DIR="$HOME/visual-novels/wine-prefixes"
+  local WINE_PREFIXES=(
+    "ffdshow"
+    "lavfilters"
+    "mciqtz32"
+    "proton_ge"
+    "quartz_dx"
+    "vanilla"
+    "wmp10quartz"
+    "wmp11"
+    "wmp11quartz"
+    "xact"
+  )
+
+  sudo apt update
+  sudo apt install -y "${APT_PACKAGES[@]}"
+
+  flatpak install flathub -y "${FLATPAK_PACKAGES[@]}"
+
+  git clone https://github.com/b-fission/vn_winestuff.git "$WINE_PREFIXES_DIR/vn_winestuff"
+
+  for wine_prefix in "${WINE_PREFIXES[@]}"; do
+    mkdir -p "$WINE_PREFIXES_DIR/$wine_prefix"
+  done
+}

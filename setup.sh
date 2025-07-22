@@ -26,6 +26,7 @@ setup() {
   local laptop=
   local wifi_driver=
   local ocr=
+  local visual_novels=
 
   while (($# > 0)); do
     case "$1" in
@@ -39,6 +40,10 @@ setup() {
 
     --ocr)
       ocr=1
+      ;;
+
+    --visual-novels)
+      visual_novels=1
       ;;
 
     --help)
@@ -87,6 +92,7 @@ setup() {
   [[ -n "$laptop" ]] && install_laptop_battery_optimizer
   [[ -n "$wifi_driver" ]] && install_rtl8192eu_driver
   [[ -n "$ocr" ]] && install_transformers_ocr
+  [[ -n "$visual_novels" ]] && install_visual_novel_requirements
 }
 
 setup "$@"
