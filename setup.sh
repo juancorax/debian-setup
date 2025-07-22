@@ -14,10 +14,10 @@ source ./core-functions/dev-tools-version-manager.sh
 source ./core-functions/flatpak-packages.sh
 source ./core-functions/fzf-fuzzy-finder.sh
 source ./core-functions/japanese-language.sh
-source ./core-functions/kitty-terminal.sh
 source ./core-functions/laptop-battery-optimizer.sh
 source ./core-functions/picom-compositor.sh
 source ./core-functions/rtl8192eu-driver.sh
+source ./core-functions/st-terminal-emulator.sh
 source ./core-functions/tmux-plugins.sh
 source ./core-functions/user-directories.sh
 source ./core-functions/zsh-shell.sh
@@ -82,7 +82,7 @@ setup() {
   change_shell_to_zsh
   install_zsh_plugins
 
-  install_kitty_terminal
+  install_st_terminal_emulator
   install_tmux_plugins
   install_fzf_fuzzy_finder
 
