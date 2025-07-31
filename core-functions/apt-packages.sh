@@ -5,6 +5,7 @@ install_apt_packages() {
     "arandr"           # screen layout
     "bat"              # replacement for cat
     "chrony"           # synchronize clock
+    "cmus"             # audio player
     "curl"             # kitty
     "exa"              # replacement for ls
     "fcitx5"           # japanese input
