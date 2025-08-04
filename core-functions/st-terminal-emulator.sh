@@ -18,4 +18,6 @@ install_st_terminal_emulator() {
   sudo make -C "$SOURCE_DIR" clean install
 
   rm -rf "$SOURCE_DIR"
+
+  sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/st 50
 }
