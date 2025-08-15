@@ -2,6 +2,7 @@ install_picom_compositor() {
   display_header "Installing picom compositor"
 
   local DEPENDENCIES=(
+    "cmake"
     "git"
     "libconfig-dev"
     "libdbus-1-dev"
