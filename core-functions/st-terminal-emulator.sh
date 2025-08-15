@@ -1,6 +1,9 @@
 install_st_terminal_emulator() {
   display_header "Installing st terminal emulator"
 
+  sudo apt update
+  sudo apt build-dep -y stterm
+
   local SOURCE_DIR="$HOME/st-flexipatch"
   local ST_PATCHES=(
     "ANYSIZE_PATCH"
