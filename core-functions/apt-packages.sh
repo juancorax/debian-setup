@@ -29,6 +29,7 @@ install_apt_packages() {
     "rofi"             # app launcher / maimpick
     "stow"             # dotfiles
     "tmux"             # programming
+    "tree"             # directory tree
     "unzip"            # extract .zip files
     "vlc"              # media dependencies
     "webp"             # maimpick
