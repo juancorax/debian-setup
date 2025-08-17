@@ -7,7 +7,7 @@ install_apt_packages() {
     "chrony"           # synchronize clock
     "cmus"             # audio player
     "curl"             # kitty
-    "exa"              # replacement for ls
+    "eza"              # replacement for ls
     "fcitx5"           # japanese input
     "fcitx5-mozc"      # japanese input
     "fd-find"          # fzf
