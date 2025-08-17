@@ -7,7 +7,6 @@ source ./utility-functions/display-header.sh
 source ./utility-functions/display-usage.sh
 
 source ./core-functions/apt-packages.sh
-source ./core-functions/apt-repositories.sh
 source ./core-functions/awesome-window-manager.sh
 source ./core-functions/configuration-files.sh
 source ./core-functions/dev-tools-version-manager.sh
@@ -63,8 +62,6 @@ setup() {
   clear
 
   display_banner
-
-  configure_apt_repositories
 
   install_apt_packages
   add_flathub_repository_to_flatpak
