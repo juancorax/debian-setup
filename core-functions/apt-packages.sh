@@ -8,6 +8,7 @@ install_apt_packages() {
     "cmus"             # audio player
     "curl"             # kitty
     "eza"              # replacement for ls
+    "fastfetch"        # replacement for neofetch
     "fcitx5"           # japanese input
     "fcitx5-mozc"      # japanese input
     "fd-find"          # fzf
