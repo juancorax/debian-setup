@@ -13,7 +13,7 @@ install_transformers_ocr() {
   display_header "Installing Transformers OCR"
 
   sudo apt update
-  sudo apt install -y python3-pip maim xclip
+  sudo apt install -y python3-pip python3-venv maim xclip
 
   local SOURCE_DIR="$HOME/transformers_ocr"
 
