@@ -19,6 +19,7 @@ source ./core-functions/rtl8192eu-driver.sh
 source ./core-functions/st-terminal-emulator.sh
 source ./core-functions/tmux-plugins.sh
 source ./core-functions/user-directories.sh
+source ./core-functions/wallpapers.sh
 source ./core-functions/zsh-shell.sh
 
 setup() {
@@ -72,6 +73,7 @@ setup() {
   create_user_directories
 
   add_configuration_files
+  add_wallpapers
 
   install_awesome_window_manager
   install_picom_compositor
