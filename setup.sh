@@ -13,7 +13,7 @@ source ./core-functions/dev-tools-version-manager.sh
 source ./core-functions/flatpak-packages.sh
 source ./core-functions/fzf-fuzzy-finder.sh
 source ./core-functions/japanese-language.sh
-source ./core-functions/laptop-battery-optimizer.sh
+source ./core-functions/laptop-utilities.sh
 source ./core-functions/picom-compositor.sh
 source ./core-functions/rtl8192eu-driver.sh
 source ./core-functions/st-terminal-emulator.sh
@@ -86,7 +86,10 @@ setup() {
   install_dev_tools_version_manager
   install_dev_tools
 
-  [[ -n "$laptop" ]] && install_laptop_battery_optimizer
+  if [[ -n "$laptop" ]]; then
+    install_auto_cpufreq
+    install_brightnessctl
+  fi
   [[ -n "$wifi_driver" ]] && install_rtl8192eu_driver
   [[ -n "$ocr" ]] && install_transformers_ocr
   [[ -n "$visual_novels" ]] && install_visual_novel_requirements

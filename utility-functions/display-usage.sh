@@ -9,7 +9,7 @@ USAGE:
 
 OPTIONS:
 
-  --laptop           Install laptop battery optimizer
+  --laptop           Install laptop utilities
   --wifi-driver      Install Realtek RTL8192EU driver
   --ocr              Install Transformers OCR
   --visual-novels    Install visual novel requirements
