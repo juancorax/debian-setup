@@ -17,7 +17,6 @@ source ./core-functions/laptop-utilities.sh
 source ./core-functions/picom-compositor.sh
 source ./core-functions/rtl8192eu-driver.sh
 source ./core-functions/st-terminal-emulator.sh
-source ./core-functions/tmux-plugins.sh
 source ./core-functions/user-directories.sh
 source ./core-functions/wallpapers.sh
 source ./core-functions/zsh-shell.sh
@@ -82,7 +81,6 @@ setup() {
   install_zsh_plugins
 
   install_st_terminal_emulator
-  install_tmux_plugins
   install_fzf_fuzzy_finder
 
   install_dev_tools_version_manager
