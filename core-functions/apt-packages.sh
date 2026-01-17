@@ -6,7 +6,6 @@ install_apt_packages() {
     "bat"              # replacement for cat
     "chrony"           # synchronize clock
     "cmus"             # audio player
-    "curl"             # kitty
     "eza"              # replacement for ls
     "fastfetch"        # replacement for neofetch
     "fcitx5"           # japanese input
@@ -14,7 +13,7 @@ install_apt_packages() {
     "fd-find"          # fzf
     "feh"              # wallpapers
     "flatpak"          # newer packages
-    "git"              # programming / dotfiles / tmux-plugins
+    "git"              # programming / dotfiles
     "libavcodec-extra" # media codecs
     "libnotify-bin"    # desktop notifications
     "locales"          # locale-gen
@@ -26,7 +25,6 @@ install_apt_packages() {
     "pipewire-audio"   # pipewire
     "qt5ct"            # qt5 theme
     "qt6ct"            # qt6 theme
-    "ripgrep"          # telescope.nvim
     "rofi"             # app launcher / maimpick
     "stow"             # dotfiles
     "tmux"             # programming
@@ -34,7 +32,7 @@ install_apt_packages() {
     "unzip"            # extract .zip files
     "vlc"              # media dependencies
     "webp"             # maimpick
-    "wget"             # maimpick / neovim
+    "wget"             # maimpick
     "xclip"            # maimpick
     "xdotool"          # maimpick
     "xinit"            # startx
