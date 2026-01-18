@@ -31,11 +31,8 @@ install_transformers_ocr() {
 install_visual_novel_requirements() {
   display_header "Installing visual novel requirements"
 
-  local APT_PACKAGES=(
-    "p7zip-full"
-    "unrar"
-  )
   local FLATPAK_PACKAGES=(
+    "io.github.peazip.PeaZip"
     "net.davidotek.pupgui2"
     "net.lutris.Lutris"
   )
@@ -52,9 +49,6 @@ install_visual_novel_requirements() {
     "wmp11quartz"
     "xact"
   )
-
-  sudo apt update
-  sudo apt install -y "${APT_PACKAGES[@]}"
 
   flatpak install flathub -y "${FLATPAK_PACKAGES[@]}"
 
