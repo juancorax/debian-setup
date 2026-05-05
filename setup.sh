@@ -90,7 +90,7 @@ setup() {
     install_brightnessctl
   fi
   [[ -n "$wifi_driver" ]] && install_rtl8192eu_driver
-  [[ -n "$ocr" ]] && install_transformers_ocr
+  [[ -n "$ocr" ]] && install_lancet
   [[ -n "$visual_novels" ]] && install_visual_novel_requirements
 }
 

@@ -9,23 +9,18 @@ enable_japanese_locale() {
   flatpak update -y
 }
 
-install_transformers_ocr() {
-  display_header "Installing Transformers OCR"
+install_lancet() {
+  display_header "Installing Lancet"
 
   sudo apt update
-  sudo apt install -y python3-pip python3-venv maim xclip
+  sudo apt install -y pipx
 
-  local SOURCE_DIR="$HOME/transformers_ocr"
   local PIP_TMPDIR="$HOME/pip_tmpdir"
 
-  git clone https://github.com/Ajatt-Tools/transformers_ocr.git "$SOURCE_DIR"
-
-  sudo make -C "$SOURCE_DIR" install
-
   mkdir -p "$PIP_TMPDIR"
-  TMPDIR="$PIP_TMPDIR" transformers_ocr download
+  TMPDIR="$PIP_TMPDIR" pipx install ajt-lancet
 
-  rm -rf "$SOURCE_DIR" "$PIP_TMPDIR"
+  rm -rf "$PIP_TMPDIR"
 }
 
 install_visual_novel_requirements() {
