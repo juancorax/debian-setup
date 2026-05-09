@@ -13,7 +13,7 @@ install_lancet() {
   display_header "Installing Lancet"
 
   sudo apt update
-  sudo apt install -y pipx
+  sudo apt install -y build-essential pipx python3-dev
 
   local PIP_TMPDIR="$HOME/pip_tmpdir"
 
