@@ -9,6 +9,15 @@ enable_japanese_locale() {
   flatpak update -y
 }
 
+install_goldendict() {
+  display_header "Installing GoldenDict-ng"
+
+  mkdir -p "$HOME"/Documents/Dictionaries/GoldenDict-ng/{Files,Morphology}
+
+  flatpak install flathub -y io.github.xiaoyifang.goldendict_ng
+  flatpak override --filesystem=home io.github.xiaoyifang.goldendict_ng
+}
+
 install_lancet() {
   display_header "Installing Lancet"
 

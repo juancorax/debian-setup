@@ -11,6 +11,7 @@ OPTIONS:
 
   --laptop           Install laptop utilities
   --wifi-driver      Install Realtek RTL8192EU driver
+  --goldendict       Install GoldenDict-ng
   --ocr              Install Lancet
   --visual-novels    Install visual novel requirements
   --help             Display this help message

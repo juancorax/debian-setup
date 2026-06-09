@@ -24,6 +24,7 @@ source ./core-functions/zsh-shell.sh
 setup() {
   local laptop=
   local wifi_driver=
+  local goldendict=
   local ocr=
   local visual_novels=
 
@@ -35,6 +36,10 @@ setup() {
 
     --wifi-driver)
       wifi_driver=1
+      ;;
+
+    --goldendict)
+      goldendict=1
       ;;
 
     --ocr)
@@ -90,6 +95,7 @@ setup() {
     install_brightnessctl
   fi
   [[ -n "$wifi_driver" ]] && install_rtl8192eu_driver
+  [[ -n "$goldendict" ]] && install_goldendict
   [[ -n "$ocr" ]] && install_lancet
   [[ -n "$visual_novels" ]] && install_visual_novel_requirements
 }
