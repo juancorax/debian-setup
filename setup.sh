@@ -9,7 +9,6 @@ source ./utility-functions/display-usage.sh
 source ./core-functions/apt-packages.sh
 source ./core-functions/awesome-window-manager.sh
 source ./core-functions/configuration-files.sh
-source ./core-functions/dev-tools.sh
 source ./core-functions/flatpak-packages.sh
 source ./core-functions/fzf-fuzzy-finder.sh
 source ./core-functions/japanese-language.sh
@@ -87,8 +86,6 @@ setup() {
 
   install_st_terminal_emulator
   install_fzf_fuzzy_finder
-
-  install_dev_tools
 
   if [[ -n "$laptop" ]]; then
     install_auto_cpufreq
