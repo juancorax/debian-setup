@@ -15,6 +15,7 @@ source ./core-functions/japanese-language.sh
 source ./core-functions/laptop-utilities.sh
 source ./core-functions/picom-compositor.sh
 source ./core-functions/rtl8192eu-driver.sh
+source ./core-functions/syncthing-file-sync.sh
 source ./core-functions/wezterm-terminal-emulator.sh
 source ./core-functions/user-directories.sh
 source ./core-functions/wallpapers.sh
@@ -86,6 +87,8 @@ setup() {
 
   install_wezterm_terminal_emulator
   install_fzf_fuzzy_finder
+
+  install_syncthing_file_sync
 
   if [[ -n "$laptop" ]]; then
     install_auto_cpufreq
