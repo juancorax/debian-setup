@@ -27,7 +27,6 @@ install_apt_packages() {
     "qt6ct"            # qt6 theme
     "rofi"             # app launcher / maimpick
     "stow"             # dotfiles
-    "tmux"             # programming
     "tree"             # directory tree
     "unzip"            # extract .zip files
     "vlc"              # media dependencies
