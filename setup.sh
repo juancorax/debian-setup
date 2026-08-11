@@ -15,7 +15,7 @@ source ./core-functions/japanese-language.sh
 source ./core-functions/laptop-utilities.sh
 source ./core-functions/picom-compositor.sh
 source ./core-functions/rtl8192eu-driver.sh
-source ./core-functions/st-terminal-emulator.sh
+source ./core-functions/wezterm-terminal-emulator.sh
 source ./core-functions/user-directories.sh
 source ./core-functions/wallpapers.sh
 source ./core-functions/zsh-shell.sh
@@ -84,7 +84,7 @@ setup() {
   change_shell_to_zsh
   install_zsh_plugins
 
-  install_st_terminal_emulator
+  install_wezterm_terminal_emulator
   install_fzf_fuzzy_finder
 
   if [[ -n "$laptop" ]]; then
