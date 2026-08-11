@@ -9,6 +9,7 @@ install_flatpak_packages() {
 
   local FLATPAK_PACKAGES=(
     "com.github.tchx84.Flatseal"                      # manage flatpak permissions
+    "io.github.peazip.PeaZip"                         # archive and file manager
     "io.github.ungoogled_software.ungoogled_chromium" # default web browser
     "org.keepassxc.KeePassXC"                         # accounts
     "org.qbittorrent.qBittorrent"                     # bittorrent client

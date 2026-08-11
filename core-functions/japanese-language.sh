@@ -36,7 +36,6 @@ install_visual_novel_requirements() {
   display_header "Installing visual novel requirements"
 
   local FLATPAK_PACKAGES=(
-    "io.github.peazip.PeaZip"
     "net.davidotek.pupgui2"
     "net.lutris.Lutris"
   )
