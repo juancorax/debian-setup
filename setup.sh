@@ -13,12 +13,13 @@ source ./core-functions/flatpak-packages.sh
 source ./core-functions/fzf-fuzzy-finder.sh
 source ./core-functions/japanese-language.sh
 source ./core-functions/laptop-utilities.sh
+source ./core-functions/neovim-text-editor.sh
 source ./core-functions/picom-compositor.sh
 source ./core-functions/rtl8192eu-driver.sh
 source ./core-functions/syncthing-file-sync.sh
-source ./core-functions/wezterm-terminal-emulator.sh
 source ./core-functions/user-directories.sh
 source ./core-functions/wallpapers.sh
+source ./core-functions/wezterm-terminal-emulator.sh
 source ./core-functions/zsh-shell.sh
 
 setup() {
@@ -87,6 +88,7 @@ setup() {
 
   install_wezterm_terminal_emulator
   install_fzf_fuzzy_finder
+  install_neovim_text_editor
 
   install_syncthing_file_sync
 
