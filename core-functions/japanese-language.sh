@@ -15,7 +15,8 @@ install_goldendict() {
   mkdir -p "$HOME"/Documents/Dictionaries/GoldenDict-ng/{Files,Morphology}
 
   flatpak install flathub -y io.github.xiaoyifang.goldendict_ng
-  flatpak override --filesystem=home io.github.xiaoyifang.goldendict_ng
+
+  sudo flatpak override --filesystem=home io.github.xiaoyifang.goldendict_ng
 }
 
 install_lancet() {
